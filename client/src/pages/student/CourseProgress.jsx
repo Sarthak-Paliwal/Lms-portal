@@ -29,7 +29,7 @@ const CourseProgress = () => {
   ] = useInCompleteCourseMutation();
 
   useEffect(() => {
-    console.log(markCompleteData);
+  
 
     if (completedSuccess) {
       refetch();
@@ -82,7 +82,7 @@ const CourseProgress = () => {
       {/* Display course name  */}
       <div className="flex justify-between mb-4">
         <h1 className="text-2xl font-bold">{courseTitle}</h1>
-        <Button
+        <Button className=" bg-[#8b5cf6] hover:bg-[#6d44c1]"
           onClick={completed ? handleInCompleteCourse : handleCompleteCourse}
           variant={completed ? "outline" : "default"}
         >

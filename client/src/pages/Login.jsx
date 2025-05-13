@@ -109,7 +109,7 @@ const Login = () => {
                   name="name"
                   value={signupInput.name}
                   onChange={(e) => changeInputHandler(e, "signup")}
-                  placeholder="Eg. patel"
+                  placeholder="Eg. Sarthal"
                   required="true"
                 />
               </div>
@@ -120,7 +120,7 @@ const Login = () => {
                   name="email"
                   value={signupInput.email}
                   onChange={(e) => changeInputHandler(e, "signup")}
-                  placeholder="Eg. patel@gmail.com"
+                  placeholder="Eg. sarthak@gmail.com"
                   required="true"
                 />
               </div>
@@ -137,7 +137,7 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button
+              <Button className=" bg-[#8b5cf6] hover:bg-[#6d44c1]"
                 disabled={registerIsLoading}
                 onClick={() => handleRegistration("signup")}
               >
@@ -169,7 +169,7 @@ const Login = () => {
                   name="email"
                   value={loginInput.email}
                   onChange={(e) => changeInputHandler(e, "login")}
-                  placeholder="Eg. patel@gmail.com"
+                  placeholder="Eg. sarthak@gmail.com"
                   required="true"
                 />
               </div>
@@ -186,7 +186,7 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button
+              <Button className=" bg-[#8b5cf6] hover:bg-[#6d44c1]"
                 disabled={loginIsLoading}
                 onClick={() => handleRegistration("login")}
               >

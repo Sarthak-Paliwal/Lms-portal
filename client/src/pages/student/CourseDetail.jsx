@@ -26,7 +26,7 @@ const CourseDetail = () => {
   if (isError) return <h>Failed to load course details</h>;
 
   const { course, purchased } = data;
-  console.log(purchased);
+  
 
   const handleContinueCourse = () => {
     if(purchased){
@@ -36,15 +36,16 @@ const CourseDetail = () => {
 
   return (
     <div className="space-y-5">
-      <div className="bg-[#2D2F31] text-white">
+      <div className="bg-[#7e4d6e] text-black">
         <div className="max-w-7xl mx-auto py-8 px-4 md:px-8 flex flex-col gap-2">
           <h1 className="font-bold text-2xl md:text-3xl">
             {course?.courseTitle}
           </h1>
-          <p className="text-base md:text-lg">Course Sub-title</p>
+          <p className="text-base md:text-lg">
+          {course?.subTitle}</p>
           <p>
             Created By{" "}
-            <span className="text-[#C0C4FC] underline italic">
+            <span className="text-[#000000] underline italic">
               {course?.creator.name}
             </span>
           </p>
@@ -90,13 +91,13 @@ const CourseDetail = () => {
                   controls={true}
                 />
               </div>
-              <h1>Lecture title</h1>
+              <h1>{course?.courseTitle}</h1>
               <Separator className="my-2" />
-              <h1 className="text-lg md:text-xl font-semibold">Course Price</h1>
+              <h1 className="text-lg md:text-xl font-semibold">{course?.coursePrice}</h1>
             </CardContent>
             <CardFooter className="flex justify-center p-4">
               {purchased ? (
-                <Button onClick={handleContinueCourse} className="w-full">Continue Course</Button>
+                <Button onClick={handleContinueCourse} className="w-full bg-[#8b5cf6] hover:bg-[#6d44c1]">Continue Course</Button>
               ) : (
                 <BuyCourseButton courseId={courseId} />
               )}
